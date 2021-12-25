@@ -61,8 +61,8 @@ router.post(
 
 			await user.save();
 
-			// jsonwebtoken => uniqe token given to users with
-			// mongo user id as the payload
+			// jsonwebtoken => uniqe token given to client with
+			// mongo ObjectId as payload -- goto middleware/auth
 			const payload = {
 				user: {
 					id: user.id,
@@ -73,7 +73,7 @@ router.post(
 				payload,
 				secret,
 				{
-					expiresIn: "1h",
+					expiresIn: "5h",
 				},
 				(err, token) => {
 					if (err) throw err;

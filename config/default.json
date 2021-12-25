@@ -1,4 +1,6 @@
 {
     "mongoURI":"mongodb://localhost:27017/shebangdb",
-    "jwtSecret": "thisisthejwtsecretkey"
+    "jwtSecret": "thisisthejwtsecretkey",
+    "githubClientId": "9a9be4af02ea4280697f",
+    "githubSecretKey": "4f20a10253613fa5d5356643370c9f42a0addb8f"
 }
