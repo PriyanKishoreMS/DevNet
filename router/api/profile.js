@@ -137,14 +137,14 @@ router.get("/user/:user_id", async (req, res) => {
 		}
 		res.json(profile);
 	} catch (err) {
-		if (err.kind == "ObjectId")
+		if (err.kind === "ObjectId")
 			return res.status(400).json({ msg: "Profile not found" });
 		console.error(err.message);
 		res.status(500).send("Server Error");
 	}
 });
 
-// @route   POST api/profile/
+// @route   DELETE api/profile/
 // @desc    Delete profile,user & posts
 // @access  Private
 
